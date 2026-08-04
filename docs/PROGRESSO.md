@@ -15,26 +15,25 @@
 
 ## Estado atual
 
-- **Fase:** 0 — Preparação do ambiente e do repositório
-- **Etapa:** Registro e conclusão da configuração inicial do Git
-- **Status:** Em andamento
-- **Branch atual:** `docs/registrar-fase-zero`
-- **Último commit:** `e0dedd8` — `docs: adiciona documentação inicial do projeto`
-- **Último Pull Request:** Ainda não criado
-- **Último merge:** Ainda não realizado
+- **Fase:** 1 — Fundamentos de programação com Java
+- **Etapa:** Primeiro programa Java
+- **Status:** Em revisão
+- **Branch atual:** `feat/primeiro-programa-java`
+- **Último commit:** `238bfe4` — `feat: adiciona primeiro programa Java`
+- **Último Pull Request:** `#1` — concluído
+- **Último merge:** `63e75ff`
 - **Branch principal:** `main`
 - **Repositório remoto:** `origin`
 - **Bloqueios:** Nenhum
 
 ### Próximo passo
 
-1. Substituir o conteúdo antigo deste arquivo por esta versão simplificada.
-2. Revisar as alterações com Git.
-3. Criar um commit na branch atual.
-4. Enviar a branch ao GitHub.
-5. Abrir o primeiro Pull Request.
-6. Revisar e fazer o merge na `main`.
-7. Iniciar a primeira etapa de código em Java.
+1. Registrar esta rodada no `PROGRESSO.md`.
+2. Criar o commit da documentação.
+3. Enviar a atualização ao GitHub.
+4. Abrir o Pull Request do primeiro programa Java.
+5. Revisar e fazer o merge.
+6. Iniciar entrada de dados com `Scanner`.
 
 ---
 
@@ -162,6 +161,39 @@ Esse aviso não impediu o funcionamento do Git e está relacionado aos diferente
 - Atualizar a `main`.
 - Encerrar a Fase 0.
 - Iniciar o primeiro programa Java.
+
+### Rodada 002 — Primeiro programa Java
+
+- **Data:** 04/08/2026
+- **Status:** Em revisão
+- **Branch:** `feat/primeiro-programa-java`
+- **Commit de código:** `238bfe4`
+- **Pull Request:** Pendente
+
+#### Implementado
+
+- Criado o arquivo `Main.java`.
+- Criada a classe pública `Main`.
+- Criado o método de entrada `main`.
+- Exibido o nome do sistema no terminal.
+- Código compilado e executado com sucesso.
+- `Main.class` corretamente ignorado pelo Git.
+
+#### Aprendido e confirmado
+
+- `Main.java` contém o código-fonte.
+- `javac Main.java` compila o código.
+- A compilação gera o arquivo `Main.class`.
+- `java Main` executa a classe compilada na JVM.
+- `System.out.println` imprime uma mensagem e quebra a linha.
+- O nome do arquivo deve corresponder ao nome da classe pública.
+- Arquivos `.class` são gerados automaticamente e não devem ser versionados.
+- Um arquivo de código deve terminar com uma quebra de linha.
+
+#### Próximo passo
+
+- Abrir e concluir o Pull Request desta entrega.
+- Começar a receber dados do usuário com `Scanner`.
 
 ---
 
