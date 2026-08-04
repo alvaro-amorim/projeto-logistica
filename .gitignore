@@ -1,0 +1,19 @@
+# Arquivos compilados do Java
+*.class
+
+# Diretórios de compilação
+target/
+out/
+bin/
+
+# Configurações de editores e IDEs
+.vscode/
+.idea/
+*.iml
+
+# Variáveis de ambiente
+.env
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
