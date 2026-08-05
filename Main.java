@@ -30,7 +30,31 @@ public class Main {
             }
             } while (!nomeValido);
 
+
+        int quatidadePrioridades = 0;
+        boolean quantidadeValida;
+
+        do {
+            System.out.print("Digite a quantidade de coletas prioritárias: ");
+            String quantidadeDigitada = scanner.nextLine().trim();
+
+            try {
+                quatidadePrioridades = Integer.parseInt(quantidadeDigitada);
+
+                if (quatidadePrioridades < 0) {
+                    System.out.println("A quantidade não pode ser negativa.");
+                    quantidadeValida = false;
+                } else {
+                    quantidadeValida = true;
+                }
+                } catch (NumberFormatException erro) {
+                    System.out.println("Digite um número inteiro.");
+                    quantidadeValida = false;
+                }
+            } while (!quantidadeValida);
+
         System.out.println("Olá, " + nome + "!");
+        System.out.println("Existem " + quatidadePrioridades + " coletas prioritárias.");
 
         scanner.close();
     }
