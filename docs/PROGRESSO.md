@@ -16,12 +16,12 @@
 ## Estado atual
 
 - **Fase:** 1 — Fundamentos de programação com Java
-- **Etapa:** Primeiro programa Java
+- **Etapa:** Entrada de dados e validação com `Scanner`
 - **Status:** Em revisão
-- **Branch atual:** `feat/primeiro-programa-java`
-- **Último commit:** `238bfe4` — `feat: adiciona primeiro programa Java`
-- **Último Pull Request:** `#1` — concluído
-- **Último merge:** `63e75ff`
+- **Branch atual:** `feat/entrada-dados-scanner`
+- **Último commit:** `7765edb` — `feat: adiciona entrada e validação de nome com Scanner`
+- **Último Pull Request:** `#2` — concluído
+- **Último merge:** `51bd3dd`
 - **Branch principal:** `main`
 - **Repositório remoto:** `origin`
 - **Bloqueios:** Nenhum
@@ -30,10 +30,10 @@
 
 1. Registrar esta rodada no `PROGRESSO.md`.
 2. Criar o commit da documentação.
-3. Enviar a atualização ao GitHub.
-4. Abrir o Pull Request do primeiro programa Java.
-5. Revisar e fazer o merge.
-6. Iniciar entrada de dados com `Scanner`.
+3. Enviar a branch ao GitHub.
+4. Abrir e revisar o Pull Request.
+5. Fazer o merge e sincronizar a `main`.
+6. Iniciar entrada de dados numéricos e tratamento de exceções.
 
 ---
 
@@ -71,15 +71,36 @@
 - Chaves e segredos não devem ser escritos diretamente no código ou enviados ao GitHub.
 - Um segredo exposto deve ser revogado e substituído.
 
+### Java — entrada e validação
+
+- `Scanner` permite receber dados pela entrada padrão `System.in`.
+- `nextLine()` lê toda a linha digitada pelo usuário.
+- `trim()` remove espaços no início e no final do texto.
+- `String` armazena valores textuais.
+- `boolean` armazena apenas `true` ou `false`.
+- `if`, `else if` e `else` controlam decisões em sequência.
+- O primeiro bloco cuja condição for verdadeira é executado.
+- `do-while` executa o bloco pelo menos uma vez e depois verifica se deve repeti-lo.
+- O operador `!` nega um valor booleano.
+- `isBlank()` verifica se um texto está vazio ou contém apenas espaços.
+- `length()` informa a quantidade de caracteres.
+- `matches()` verifica se o texto corresponde a uma expressão regular.
+- A expressão `[\\p{L}\\p{M} ]+` aceita letras Unicode, marcas de acentuação e espaços.
+- Validação de entrada impede valores que não seguem as regras do sistema.
+- Validação de entrada é diferente de tratamento de exceções.
+- `StandardCharsets.UTF_8` define explicitamente a codificação usada pelo `Scanner`.
+- A entrada e a saída do terminal também precisam estar configuradas de forma compatível com UTF-8.
+
 ---
 
 ## Conhecimentos em desenvolvimento
 
-- Pull Requests.
-- Revisão de alterações no GitHub.
-- Merge.
-- Exclusão de branches após o merge.
-- Sincronização da `main` local com a remota.
+- Entrada de dados numéricos.
+- Conversão de textos para números.
+- Tratamento de exceções.
+- Expressões regulares mais avançadas.
+- Separação do código em métodos.
+- Configuração permanente do terminal em UTF-8.
 - Variáveis de ambiente em produção.
 - Diferença entre configurações públicas e segredos no frontend.
 - Uso seguro de segredos no backend.
@@ -107,11 +128,11 @@ Essa dúvida será aprofundada nas fases de API, segurança e deploy.
 ### Rodada 001 — Estrutura inicial e configuração do Git
 
 - **Data:** 04/08/2026
-- **Status:** Em andamento
-- **Branch inicial:** `main`
-- **Branch atual:** `docs/registrar-fase-zero`
-- **Commit:** `e0dedd8`
-- **Pull Request:** Pendente
+- **Status:** Concluída
+- **Branch:** `docs/registrar-fase-zero`
+- **Commits:** `e0dedd8` e `cf0315a`
+- **Pull Request:** `#1`
+- **Merge:** `63e75ff`
 
 #### Implementado
 
@@ -165,10 +186,12 @@ Esse aviso não impediu o funcionamento do Git e está relacionado aos diferente
 ### Rodada 002 — Primeiro programa Java
 
 - **Data:** 04/08/2026
-- **Status:** Em revisão
+- **Status:** Concluída
 - **Branch:** `feat/primeiro-programa-java`
 - **Commit de código:** `238bfe4`
-- **Pull Request:** Pendente
+- **Commit de documentação:** `8a98f8c`
+- **Pull Request:** `#2`
+- **Merge:** `51bd3dd`
 
 #### Implementado
 
@@ -194,6 +217,56 @@ Esse aviso não impediu o funcionamento do Git e está relacionado aos diferente
 
 - Abrir e concluir o Pull Request desta entrega.
 - Começar a receber dados do usuário com `Scanner`.
+
+### Rodada 003 — Entrada e validação de nome com Scanner
+
+- **Data:** 04/08/2026
+- **Status:** Em revisão
+- **Branch:** `feat/entrada-dados-scanner`
+- **Commit de código:** `7765edb`
+- **Commit de documentação:** Pendente
+- **Pull Request:** Pendente
+
+#### Implementado
+
+- Entrada do nome do usuário pelo terminal.
+- Leitura da linha completa com `nextLine()`.
+- Remoção de espaços externos com `trim()`.
+- Validação de campo vazio.
+- Validação de tamanho mínimo de 3 caracteres.
+- Validação de tamanho máximo de 50 caracteres.
+- Rejeição de números e caracteres especiais.
+- Aceitação de nomes compostos e letras acentuadas.
+- Repetição da pergunta enquanto o nome for inválido.
+- Uso explícito de UTF-8 no `Scanner`.
+- Configuração da entrada e da saída do PowerShell para UTF-8.
+- Testes manuais com entradas válidas e inválidas.
+
+#### Aprendido e confirmado
+
+- Criação e utilização de um objeto `Scanner`.
+- Diferença entre `System.in` e `System.out`.
+- Uso de variáveis `String` e `boolean`.
+- Funcionamento de `if`, `else if` e `else`.
+- Funcionamento do laço `do-while`.
+- Uso do operador de negação `!`.
+- Uso de `trim()`, `isBlank()`, `length()` e `matches()`.
+- Validação com expressão regular.
+- Funcionamento básico da codificação UTF-8.
+- Diferença entre validação de entrada e tratamento de exceções.
+
+#### Dificuldades encontradas
+
+- Confusão inicial com a sintaxe do `if`, `else if`, `else` e `do-while`.
+- Sugestões automáticas do VS Code atrapalhando a digitação.
+- Incompatibilidade de codificação entre Java e PowerShell.
+- Necessidade de salvar e recompilar o arquivo após cada alteração.
+
+#### Próximo passo
+
+- Concluir o Pull Request desta entrega.
+- Aprender entrada de dados numéricos.
+- Entender situações que realmente geram exceções em Java.
 
 ---
 
