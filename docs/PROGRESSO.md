@@ -16,12 +16,12 @@
 ## Estado atual
 
 - **Fase:** 1 — Fundamentos de programação com Java
-- **Etapa:** Entrada de dados e validação com `Scanner`
+- **Etapa:** Entrada numérica e tratamento de exceções
 - **Status:** Em revisão
-- **Branch atual:** `feat/entrada-dados-scanner`
-- **Último commit:** `7765edb` — `feat: adiciona entrada e validação de nome com Scanner`
-- **Último Pull Request:** `#2` — concluído
-- **Último merge:** `51bd3dd`
+- **Branch atual:** `feat/entrada-numerica-excecoes`
+- **Último commit de código:** `<7fd8814>` — `feat: adiciona entrada numérica e tratamento de exceções`
+- **Último Pull Request concluído:** `#3`
+- **Último merge:** `5e746fd`
 - **Branch principal:** `main`
 - **Repositório remoto:** `origin`
 - **Bloqueios:** Nenhum
@@ -33,7 +33,7 @@
 3. Enviar a branch ao GitHub.
 4. Abrir e revisar o Pull Request.
 5. Fazer o merge e sincronizar a `main`.
-6. Iniciar entrada de dados numéricos e tratamento de exceções.
+6. Organizar o programa em métodos.
 
 ---
 
@@ -91,15 +91,36 @@
 - `StandardCharsets.UTF_8` define explicitamente a codificação usada pelo `Scanner`.
 - A entrada e a saída do terminal também precisam estar configuradas de forma compatível com UTF-8.
 
+### Java — números e exceções
+
+- `Integer.parseInt()` converte uma `String` para um valor `int`.
+- O valor retornado pela conversão precisa ser armazenado em uma variável.
+- Uma conversão numérica inválida pode gerar `NumberFormatException`.
+- O bloco `try` contém uma operação que pode lançar uma exceção.
+- O bloco `catch` captura uma exceção compatível e define como o programa deve reagir.
+- Quando uma exceção acontece dentro do `try`, as instruções restantes desse bloco são ignoradas.
+- Depois do `catch`, o programa continua na próxima instrução após o `try-catch`.
+- O `try-catch` não repete uma operação automaticamente.
+- O `do-while` controla a repetição das tentativas.
+- Uma variável `boolean` pode registrar se a última tentativa foi válida.
+- `try-catch`, `do-while` e `if-else` possuem responsabilidades diferentes.
+- O `try-catch` verifica se a conversão pode ser realizada.
+- O `if-else` aplica regras de negócio depois da conversão.
+- Números negativos podem ser inteiros válidos para o Java e inválidos para o sistema.
+- Um valor decimal não pode ser convertido com `Integer.parseInt()`.
+- Um número grande demais para o tipo `int` também gera `NumberFormatException`.
+
 ---
 
 ## Conhecimentos em desenvolvimento
 
-- Entrada de dados numéricos.
-- Conversão de textos para números.
-- Tratamento de exceções.
+- Criação e utilização de métodos.
+- Parâmetros e argumentos.
+- Valores de retorno.
+- Escopo de variáveis.
+- Separação de responsabilidades.
+- Outros tipos numéricos, como `double`.
 - Expressões regulares mais avançadas.
-- Separação do código em métodos.
 - Configuração permanente do terminal em UTF-8.
 - Variáveis de ambiente em produção.
 - Diferença entre configurações públicas e segredos no frontend.
@@ -221,11 +242,12 @@ Esse aviso não impediu o funcionamento do Git e está relacionado aos diferente
 ### Rodada 003 — Entrada e validação de nome com Scanner
 
 - **Data:** 04/08/2026
-- **Status:** Em revisão
+- **Status:** Concluída
 - **Branch:** `feat/entrada-dados-scanner`
 - **Commit de código:** `7765edb`
-- **Commit de documentação:** Pendente
-- **Pull Request:** Pendente
+- **Commit de documentação:** `4c2479e`
+- **Pull Request:** `#3`
+- **Merge:** `5e746fd`
 
 #### Implementado
 
@@ -267,6 +289,58 @@ Esse aviso não impediu o funcionamento do Git e está relacionado aos diferente
 - Concluir o Pull Request desta entrega.
 - Aprender entrada de dados numéricos.
 - Entender situações que realmente geram exceções em Java.
+
+### Rodada 004 — Entrada numérica e tratamento de exceções
+
+- **Data:** 05/08/2026
+- **Status:** Em revisão
+- **Branch:** `feat/entrada-numerica-excecoes`
+- **Commit de código:** `7fd8814`
+- **Pull Request:** Pendente
+
+#### Implementado
+
+- Entrada da quantidade de coletas prioritárias pelo terminal.
+- Leitura do valor inicialmente como `String`.
+- Conversão do texto para `int` com `Integer.parseInt()`.
+- Tratamento de `NumberFormatException`.
+- Exibição de mensagem controlada para entradas inválidas.
+- Repetição da pergunta enquanto a quantidade for inválida.
+- Rejeição de valores decimais.
+- Rejeição de textos e valores alfanuméricos.
+- Rejeição de números negativos.
+- Aceitação do valor zero.
+- Aceitação de números inteiros positivos.
+- Exibição da quantidade convertida na mensagem final.
+- Testes manuais com diferentes entradas.
+
+#### Aprendido e confirmado
+
+- Diferença entre validação e tratamento de exceções.
+- Diferença entre `String` e `int`.
+- Funcionamento de `Integer.parseInt()`.
+- Funcionamento básico de `try` e `catch`.
+- Fluxo de execução quando uma exceção acontece.
+- Função do `do-while` na repetição das tentativas.
+- Função do `boolean` no controle do laço.
+- Uso de `if-else` para aplicar regras de negócio.
+- Diferença entre um número tecnicamente válido e um valor permitido pelo sistema.
+- Combinação de `try-catch`, `if-else` e `do-while`.
+
+#### Dificuldades encontradas
+
+- Entender por que o `catch` não repete a pergunta sozinho.
+- Entender por que o programa continuava depois do `catch`.
+- Diferenciar uma falha de conversão de uma regra de negócio.
+- Perceber que o retorno de `Integer.parseInt()` precisava ser armazenado.
+- Compreender a responsabilidade individual de cada estrutura.
+
+#### Próximo passo
+
+- Concluir o Pull Request desta entrega.
+- Separar a leitura e a validação do nome em um método.
+- Separar a leitura e a validação da quantidade em outro método.
+- Estudar parâmetros, retornos e escopo de variáveis.
 
 ---
 
